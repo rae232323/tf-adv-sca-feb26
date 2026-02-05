@@ -29,7 +29,7 @@ pipeline {
       steps {
         sh """
           cd ${TF_DIR}
-          terraform init -migrate-state
+          terraform init -migrate-state -input=false
           terraform validate
         """
       }
